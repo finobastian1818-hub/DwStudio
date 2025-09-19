@@ -1,0 +1,250 @@
+# Membuat file index.html untuk website daftar harga cetak foto DW Studio dan zip untuk di-download
+html_code = """<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DW Studio - Daftar Harga Cetak Foto</title>
+  <style>
+    :root{--accent:#1f8feb;--muted:#666;--bg:#f7f9fc}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#222;margin:0;background:var(--bg)}
+    header{background:linear-gradient(90deg,var(--accent),#2db6ff);color:white;padding:2rem 1rem;text-align:center}
+    .container{max-width:1000px;margin:1.5rem auto;background:white;border-radius:10px;box-shadow:0 6px 20px rgba(23,43,77,0.08);overflow:hidden}
+    .hero{padding:1.2rem 1.5rem;border-bottom:1px solid #eef2f7;display:flex;gap:1rem;align-items:center;flex-wrap:wrap}
+    .hero h1{margin:0;font-size:1.4rem}
+    .hero p{margin:0;color:var(--muted)}
+
+    table{width:100%;border-collapse:collapse;margin:0}
+    thead th{background:#f2f7ff;padding:0.9rem 1rem;text-align:left;font-weight:600;color:#123a6b}
+    tbody td{padding:0.9rem 1rem;border-top:1px solid #f1f4f8;color:#333}
+    tbody tr:nth-child(odd){background:#ffffff}
+    tbody tr:nth-child(even){background:#fbfdff}
+
+    .size{font-weight:600}
+    .note{font-size:0.9rem;color:var(--muted);margin:0.6rem 1.2rem}
+    .btn-wa{display:inline-block;background:#25D366;color:#083; padding:0.45rem 0.8rem;border-radius:8px;text-decoration:none;font-weight:700;border:2px solid rgba(0,0,0,0.04)}
+    .btn-wa:hover{opacity:0.95}
+
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:1rem;padding:1rem}
+    .contact{padding:1rem;border-left:1px solid #f1f4f8}
+    .contact h3{margin-top:0}
+    footer{padding:1rem;text-align:center;color:var(--muted);font-size:0.9rem}
+
+    /* responsive */
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.contact{border-left:none;border-top:1px solid #f1f4f8} thead th{display:none} tbody td{display:block;padding:0.8rem 1rem} tbody td::before{content:attr(data-label);display:block;font-weight:600;color:var(--muted);margin-bottom:0.3rem}}
+  </style>
+</head>
+<body>
+  <header>
+    <div style="max-width:1000px;margin:auto">
+      <h2 style="margin:0">DW Studio</h2>
+      <p style="margin:6px 0 0">Cetak Foto | Cepat & Berkualitas</p>
+    </div>
+  </header>
+
+  <div class="container" role="main">
+    <div class="hero">
+      <div>
+        <h1>Daftar Harga Cetak Foto</h1>
+        <p class="note">Semua harga dapat berubah — hubungi DW Studio untuk konfirmasi. Harga tertera per lembar (kecuali disebutkan).</p>
+      </div>
+      <div style="margin-left:auto">
+        <a class="btn-wa" href="https://wa.me/6285841285055?text=Halo%20DW%20Studio%2C%20saya%20mau%20tanya%20tentang%20cetak%20foto" target="_blank">Chat Admin via WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div style="padding:0 1rem 1rem 1rem">
+        <table aria-label="Daftar harga cetak foto">
+          <thead>
+            <tr>
+              <th>Ukuran</th>
+              <th>Dimensi</th>
+              <th>Media / Catatan</th>
+              <th>Harga (Rp)</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="size">2R</td>
+              <td>6 x 9 cm</td>
+              <td data-label="Media">Kertas Photo silky</td>
+              <td data-label="Harga">1.500</td>
+              <td data-label=""><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%202R%20(3.5x5cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">3R</td>
+              <td>3 x 5 inch (9x13 cm)</td>
+              <td>Kertas Photo silky</td>
+              <td>2.500</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%203R%20(10x15cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">4R</td>
+              <td>4 x 6 inch (10x12 cm)</td>
+              <td>Kertas Photo silky</td>
+              <td>3.500</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%204R%20(15x20cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">5R</td>
+              <td>5 x 7 inch (13x18 cm)</td>
+              <td>Kertas Photo silky</td>
+              <td>5.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%205R%20(13x18cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">6R</td>
+              <td>6 x 8 inch (15x21 cm)</td>
+              <td>Kertas Photo silky / Lustre</td>
+              <td>6.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%206R%20(15x21cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">10R</td>
+              <td>8 x 10 inch (20x25 cm)</td>
+              <td>Kertas Photo silky / Lustre</td>
+              <td>10.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%208R%20(20x25cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">10R</td>
+              <td>10 x 12 inch (20x25 cm)</td>
+              <td>Photo Paper / Poster</td>
+              <td>10.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%2010R%20(25x30cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">12R</td>
+              <td>21 x 30 cm</td>
+              <td> kertas foto / silky</td>
+              <td>12.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%2012R%20(30x40cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">16R</td>
+              <td>30 x 40 cm</td>
+              <td>Poster / kertas foto silky</td>
+              <td>40.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%2016R%20(40x60cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+
+            <tr>
+              <td class="size">20R</td>
+              <td>40 x 50 cm</td>
+              <td>Kertas foto silky</td>
+              <td>85.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20A6%20(10.5x14.8cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">24R</td>
+              <td>40 x 60 cm</td>
+              <td>kertas foto silky</td>
+              <td>100.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20A5%20(14.8x21cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">26R</td>
+              <td>50 x 60 cm</td>
+              <td>Print / KERTAS FOTO SILKY</td>
+              <td>135.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20A4%20(21x29.7cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">28R</td>
+              <td>50 x 70 cm</td>
+              <td>Poster / KERTAS FOTO SILKY</td>
+              <td>180.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20A3%20(29.7x42cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+
+            <tr>
+              <td class="size">Square 4x4</td>
+              <td>4 x 4 inch (10x10 cm)</td>
+              <td>Foto Instagram Style</td>
+              <td>4.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20Square%204x4%20(10x10cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">Square 6x6</td>
+              <td>6 x 6 inch (15x15 cm)</td>
+              <td>Foto Square</td>
+              <td>9.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20Square%206x6%20(15x15cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+
+            <tr>
+              <td class="size">Canvas 20x30</td>
+              <td>20 x 30 cm</td>
+              <td>Canvas Printing (Frame opsional)</td>
+              <td>200.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20Canvas%2020x30%20(20x30cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+            <tr>
+              <td class="size">Canvas 30x40</td>
+              <td>30 x 40 cm</td>
+              <td>Canvas Printing</td>
+              <td>350.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20Canvas%2030x40%20(30x40cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+
+            <tr>
+              <td class="size">Poster 60x90</td>
+              <td>60 x 90 cm</td>
+              <td>Poster Large</td>
+              <td>150.000</td>
+              <td><a class="btn-wa" href="https://wa.me/6285841285055?text=Pesan%3A%20Poster%2060x90%20(60x90cm)%20-%20Qty%3A%20" target="_blank">Order</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="note">Catatan: Untuk cetak dengan frame, laminasi, atau finishing khusus (matte/glossy/metallic), harga akan disesuaikan. Minimal pemesanan untuk ukuran besar dapat berlaku.</p>
+      </div>
+
+      <aside class="contact" aria-label="Kontak DW Studio">
+        <h3>Kontak & Info</h3>
+        <p style="margin:0.3rem 0"><strong>DW Studio</strong></p>
+        <p style="margin:0.3rem 0">📍 Jl. puskes samping gedung kesenian No.45, Muaradua</p>
+        <p style="margin:0.3rem 0">📞 0858-4128-5055</p>
+        <p style="margin:0.3rem 0">📧 dewianjanints@gmail.com</p>
+
+        <hr style="margin:0.8rem 0;border:none;border-top:1px solid #f1f4f8">
+
+
+        <h4 style="margin:0.4rem 0 0.2rem 0">Cara Order</h4>
+        <ol style="padding-left:1.1rem;margin-top:0.3rem">
+          <li>Pilih ukuran & klik tombol <em>Order</em>.</li>
+          <li>Isi jumlah (Qty) dan beri keterangan (jika ingin laminasi/frame).</li>
+          <li>Admin akan konfirmasi & beri estimasi waktu selesai.</li>
+        </ol>
+
+        <div style="margin-top:1rem">
+          <a class="btn-wa" href="https://wa.me/6285841285055?text=Halo%20DW%20Studio%2C%20saya%20mau%20pesan%20cetak%20foto" target="_blank">Chat via WhatsApp</a>
+        </div>
+
+        <hr style="margin:1rem 0;border:none;border-top:1px solid #f1f4f8">
+
+        <h4 style="margin:0.4rem 0 0.2rem 0">Jam Operasional</h4>
+        <p style="margin:0.2rem 0">Senin - Sabtu: 09:00 - 18:00</p>
+        <p style="margin:0.2rem 0">Minggu: buka</p>
+
+      </aside>
+    </div>
+
+    <footer>
+      <p>© 2025 DW Studio. Harga tertera dalam Rupiah (Rp). Untuk perubahan harga & promosi, hubungi admin.</p>
+    </footer>
+  </div>
+</body>
+</html>
+"""
+
+# Simpan ke zip agar user bisa langsung download dan upload ke Netlify/GitHub Pages
+import zipfile, os
+zip_path = "/mnt/data/dw-studio-price-list.zip"
+with zipfile.ZipFile(zip_path, 'w') as z:
+    z.writestr("index.html", html_code)
+    z.writestr("README.txt", "Extract index.html and upload to Netlify or GitHub Pages. Replace WhatsApp number 6281234567890 with your number.")
+
+zip_path
