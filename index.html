@@ -240,11 +240,7 @@ html_code = """<!DOCTYPE html>
 </html>
 """
 
-# Simpan ke zip agar user bisa langsung download dan upload ke Netlify/GitHub Pages
-import zipfile, os
-zip_path = "/mnt/data/dw-studio-price-list.zip"
-with zipfile.ZipFile(zip_path, 'w') as z:
-    z.writestr("index.html", html_code)
-    z.writestr("README.txt", "Extract index.html and upload to Netlify or GitHub Pages. Replace WhatsApp number 6281234567890 with your number.")
 
-zip_path
+
+
+
